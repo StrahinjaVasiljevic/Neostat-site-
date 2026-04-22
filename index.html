@@ -3,210 +3,334 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Neostat — Istraživanje tržišta uz AI eksperte</title>
-  <meta name="description" content="Neostat je inovativni startap za istraživanje tržišta koji kombinuje stručnost eksperata i in-house AI alate, modele i agente. Usluge: istraživanje tržišta, SWOT analize, konsalting, marketing, AI voice recepcionista i još mnogo toga." />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://www.neostat.example/" />
 
-  <!-- Open Graph / Twitter -->
+  <title data-i18n="meta.title">
+    Neostat — AI istraživanje tržišta i strateški uvidi
+  </title>
+  <meta name="description" data-i18n="meta.description"
+        content="AI‑potpomognuto istraživanje tržišta, SWOT analize i strateški konsalting. Neostat kombinuje ekspertizu sa in‑house AI agentima i alatima kako bi isporučio brze, pouzdane i akcione uvide.">
+
+  <!-- Open Graph (ostaju statični za sada; za SEO i deljenje po jezicima kasnije ćemo izdvojiti stranice po jeziku) -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Neostat — Istraživanje tržišta uz AI eksperte" />
-  <meta property="og:description" content="Istraživanje tržišta uz AI modele i ekspertski tim. Brzi uvidi, jasne preporuke i pametne odluke." />
-  <meta property="og:image" content="/images/og-image.png" />
-  <meta property="og:url" content="https://www.neostat.example/" />
+  <meta property="og:title" content="Neostat — AI istraživanje tržišta i strateški uvidi" />
+  <meta property="og:description" content="Brzi, provereni i akcioni uvidi — eksperti + in‑house AI agenti." />
+  <meta property="og:image" content="images/og-image.svg" />
+  <meta property="og:url" content="https://strahinjavasiljevic.github.io/neostat-site/" />
   <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Performance hints -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://assets.calendly.com" crossorigin>
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <link rel="icon" type="image/png" href="/images/favicon.png" />
-  <link rel="stylesheet" href="/assets/style.css" />
+  <!-- Favicon + CSS -->
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
-  <header class="site-header">
+  <!-- Skip link (a11y) -->
+  <a class="skip-link" href="#usluge" data-i18n="nav.skip">Preskoči na sadržaj</a>
+
+  <!-- HEADER -->
+  <header class="site-header" role="banner">
     <div class="container header-inner">
-      <a class="brand" href="#">
-        <img src="/images/logo.svg" alt="Neostat logo" width="28" height="28" />
+      <a class="brand" href="#" aria-label="Neostat — Home">
+        <img src="images/logo.svg" alt="Neostat logo" width="28" height="28" />
         <span>Neostat</span>
       </a>
+
+      <!-- Language switch -->
+      <nav class="lang-switch" aria-label="Language switcher">
+        <button data-lang="sr" class="lang-btn" aria-current="true">SR</button>
+        <button data-lang="en" class="lang-btn">EN</button>
+        <button data-lang="de" class="lang-btn">DE</button>
+      </nav>
+
+      <!-- Main nav -->
       <nav class="nav" aria-label="Glavna navigacija">
-        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">☰</button>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="Menu">☰</button>
         <ul id="primary-menu" class="menu">
-          <li><a href="#usluge">Usluge</a></li>
-          <li><a href="#proces">Proces</a></li>
-          <li><a href="#o-nama">O nama</a></li>
-          <li><a href="#kontakt" class="btn btn-primary">Zakaži razgovor</a></li>
+          <li><a href="#usluge" data-i18n="nav.services">Usluge</a></li>
+          <li><a href="#proces" data-i18n="nav.process">Proces</a></li>
+          <li><a href="#o-nama" data-i18n="nav.about">O nama</a></li>
+          <li><a href="mailto:hello@neostat.ai" data-i18n="nav.email">hello@neostat.ai</a></li>
+          <li><a href="https://www.linkedin.com/company/neostat" target="_blank" rel="noopener" data-i18n="nav.linkedin">LinkedIn</a></li>
+          <li><a href="#kontakt" class="btn btn-primary" data-i18n="nav.book">Zakaži poziv</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main>
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-copy">
-          <h1>Istraživanje tržišta <span class="accent">pomoću AI</span> i eksperata</h1>
-          <p>Neostat kombinuje tim specijalista sa in‑house AI alatima, modelima i agentima kako bi isporučio brze uvide, precizne analize i jasne preporuke za rast.</p>
-          <div class="hero-cta">
-            <a href="#kontakt" class="btn btn-primary">Zatraži ponudu</a>
-            <a href="#usluge" class="btn btn-secondary">Pogledaj usluge</a>
-          </div>
-          <ul class="trust-points" aria-label="Istaknute prednosti">
-            <li>✔ brzi uvidi</li>
-            <li>✔ provereni podaci</li>
-            <li>✔ jasne akcione preporuke</li>
-          </ul>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <h1>
+          <span data-i18n="hero.title_1">Brži i pouzdaniji uvidi iz tržišta</span>
+          <span class="accent" data-i18n="hero.title_2">uz AI agente i eksperte</span>
+        </h1>
+
+        <p data-i18n="hero.subtitle">
+          Pomažemo B2B timovima da <strong>validiraju hipoteze, segmentišu tržište i odluče</strong> na osnovu
+          jasnih, akcionih nalaza. Neostat kombinuje <em>in‑house AI agente</em> za obradu i tematizaciju podataka
+          sa <em>iskusnim istraživačima</em> — kako biste do uvida stigli do <strong>3× brže</strong>, bez kompromisa po kvalitet.
+        </p>
+
+        <div class="hero-cta">
+          <!-- Calendly modal (lazy) -->
+          <a href="#"
+             class="btn btn-primary"
+             data-i18n="hero.cta_primary"
+             onclick="Calendly.initPopupWidget({ url: 'https://calendly.com/neostat/intro-20' }); return false;">
+             Zakaži besplatan poziv
+          </a>
+          <a href="#usluge" class="btn btn-secondary" data-i18n="hero.cta_secondary">Pogledaj usluge</a>
         </div>
-        <div class="hero-media">
-          <div class="card stat">
-            <div class="stat-value">3×</div>
-            <div class="stat-label">brže do uvida</div>
-          </div>
-          <div class="card stat">
-            <div class="stat-value">+25%</div>
-            <div class="stat-label">efikasniji marketing</div>
-          </div>
+
+        <ul class="trust-points" aria-label="Istaknute prednosti">
+          <li data-i18n="hero.tp1">✔ validirani i proverljivi podaci</li>
+          <li data-i18n="hero.tp2">✔ jasan „executive summary“ sa preporukama</li>
+          <li data-i18n="hero.tp3">✔ fokus na odluku i sledeći korak</li>
+        </ul>
+      </div>
+
+      <div class="hero-media">
+        <div class="card stat">
+          <div class="stat-value" data-i18n="hero.stat1v">3×</div>
+          <div class="stat-label" data-i18n="hero.stat1l">brže do uvida</div>
+        </div>
+        <div class="card stat">
+          <div class="stat-value" data-i18n="hero.stat2v">+25%</div>
+          <div class="stat-label" data-i18n="hero.stat2l">efikasniji marketing</div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- USLUGE -->
-    <section id="usluge" class="section">
-      <div class="container">
-        <h2>Usluge</h2>
-        <p class="lead">Od hipoteze do odluke — sa validiranim podacima i AI asistencijom.</p>
-        <div class="grid cards">
-          <article class="card">
-            <h3>Istraživanje tržišta</h3>
-            <p>Kvantitativna i kvalitativna istraživanja, segmentacija, analize potrošača i konkurencije, trendovi i veličina tržišta.</p>
-          </article>
-          <article class="card">
-            <h3>SWOT (interne i eksterne)</h3>
-            <p>Strukturisane SWOT analize kroz radionice sa timom i AI podrškom za mapiranje rizika i prilika.</p>
-          </article>
-          <article class="card">
-            <h3>Konsalting</h3>
-            <p>Od strategije do operativnih planova: pozicioniranje, cenovna politika, GTM, validacija ponude.</p>
-          </article>
-          <article class="card">
-            <h3>Marketing i poruke</h3>
-            <p>ICP, messaging, kreativa i testovi: A/B varijante poruka i kanala za efikasan doseg.</p>
-          </article>
-          <article class="card">
-            <h3>AI voice recepcionista</h3>
-            <p>Automatizovani AI agent za pozive i poruke — zakazuje sastanke, odgovara na česta pitanja, preusmerava upite.</p>
-          </article>
-          <article class="card">
-            <h3>Custom AI alati i agenti</h3>
-            <p>In‑house razvoj prilagođenih AI modela i radnih tokova: ekstrakcija uvida, sumarizacija i monitor tržišta.</p>
-          </article>
-        </div>
-      </div>
-    </section>
+  <!-- USLUGE -->
+  <section id="usluge" class="section">
+    <div class="container">
+      <h2 data-i18n="services.title">Usluge</h2>
+      <p class="lead" data-i18n="services.lead">Od hipoteze do odluke — istraživanje, interpretacija i preporuka u istom toku.</p>
 
-    <!-- PROCES -->
-    <section id="proces" class="section alt">
-      <div class="container">
-        <h2>Kako radimo</h2>
-        <ol class="process">
-          <li>
-            <h3>1) Brif i hipoteze</h3>
-            <p>Razumemo vašu publiku, cilj i odluku koju treba doneti. Definišemo hipoteze za proveru.</p>
-          </li>
-          <li>
-            <h3>2) Prikupljanje i obrada podataka</h3>
-            <p>Spajamo primarne i sekundarne izvore; AI agenti ubrzavaju čišćenje, tagovanje i analitiku.</p>
-          </li>
-          <li>
-            <h3>3) Uvidi i preporuke</h3>
-            <p>Jasna naracija, vizuali i preporuke — fokus na donosioca odluke i sledeći korak.</p>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- O NAMA -->
-    <section id="o-nama" class="section">
-      <div class="container about">
-        <div>
-          <h2>O Neostatu</h2>
-          <p>Mi smo tim istraživača, analitičara i inženjera koji veruju da najbolje odluke nastaju na preseku ekspertize i tehnologije. Naš in‑house AI stack omogućava da do uvida dođemo brže i vernije — bez kompromisa po kvalitet.</p>
-          <ul class="bullets">
-            <li>Ekspertski tim + AI alati</li>
-            <li>Transparentna metodologija</li>
-            <li>Brz time‑to‑insight</li>
-          </ul>
-        </div>
-        <div class="about-card card">
-          <h3>Šta dobijate</h3>
-          <ul>
-            <li>Sažet, izvršni rezime sa preporukama</li>
-            <li>Dataset/izveštaj sa grafikonima</li>
-            <li>Radionicu za stakeholder-e (opciono)</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- KONTAKT -->
-    <section id="kontakt" class="section alt">
-      <div class="container">
-        <h2>Kontakt</h2>
-        <p class="lead">Recite nam ukratko cilj i rok — javićemo se u roku od 24h.</p>
-        <form name="kontakt" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
-          <input type="hidden" name="form-name" value="kontakt" />
-          <p class="hidden">
-            <label>Ne popunjavajte ovo: <input name="bot-field" /></label>
+      <div class="grid cards">
+        <article class="card">
+          <h3 data-i18n="services.s1.title">Istraživanje tržišta</h3>
+          <p data-i18n="services.s1.desc">
+            Kvantitativno (n, obrađena uzorkovanja) i kvalitativno (intervjui, ekspertski paneli),
+            veličina i dinamika tržišta, segmentacije i „jobs‑to‑be‑done“ uvidi.
           </p>
-          <div class="form-row">
-            <label for="ime">Ime i prezime</label>
-            <input id="ime" name="ime" type="text" required />
-          </div>
-          <div class="form-row">
-            <label for="email">E‑mail</label>
-            <input id="email" name="email" type="email" required />
-          </div>
-          <div class="form-row">
-            <label for="poruka">Poruka</label>
-            <textarea id="poruka" name="poruka" rows="5" placeholder="Cilj, industrija, rok…"></textarea>
-          </div>
-          <div class="form-actions">
-            <button type="submit" class="btn btn-primary">Pošalji</button>
-            <a class="btn btn-link" href="mailto:hello@neostat.example">Ili pošalji e‑mail</a>
-          </div>
-        </form>
-      </div>
-    </section>
-  </main>
+        </article>
 
-  <footer class="site-footer">
+        <article class="card">
+          <h3 data-i18n="services.s2.title">SWOT (interne i eksterne)</h3>
+          <p data-i18n="services.s2.desc">
+            Strukturisane SWOT radionice i AI tematizacija materijala — mapiranje rizika, prilika i prioriteta po uticaju.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3 data-i18n="services.s3.title">Strateški konsalting</h3>
+          <p data-i18n="services.s3.desc">
+            Pozicioniranje, ICP, vrednosni predlog, cenovna politika i GTM — pretvaranje uvida u akcioni plan.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3 data-i18n="services.s4.title">Marketing &amp; poruke</h3>
+          <p data-i18n="services.s4.desc">
+            Definisanje messaging okvira, A/B testovi poruka i kanala, sadržaj vođen uvidima (content &amp; paid mix).
+          </p>
+        </article>
+
+        <article class="card">
+          <h3 data-i18n="services.s5.title">AI voice recepcionista</h3>
+          <p data-i18n="services.s5.desc">
+            AI agent za pozive i poruke: odgovara na FAQ, kvalifikuje lead i zakazuje sastanak.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3 data-i18n="services.s6.title">Custom AI agenti</h3>
+          <p data-i18n="services.s6.desc">
+            Pipeline za prikupljanje, čišćenje i sumarizaciju izvora; specijalizovani agenti za monitoring i ekstrakciju uvida.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCES -->
+  <section id="proces" class="section alt">
+    <div class="container">
+      <h2 data-i18n="process.title">Kako radimo</h2>
+      <ol class="process">
+        <li>
+          <h3 data-i18n="process.p1.title">1) Brif &amp; hipoteze</h3>
+          <p data-i18n="process.p1.desc">Razumevanje kupca/konkurencije i odluke koju treba doneti; definišemo hipoteze i metrike uspeha.</p>
+        </li>
+        <li>
+          <h3 data-i18n="process.p2.title">2) Podaci &amp; analiza</h3>
+          <p data-i18n="process.p2.desc">Spajamo primarne i sekundarne izvore; AI agenti ubrzavaju čišćenje i tematizaciju, eksperti vode interpretaciju.</p>
+        </li>
+        <li>
+          <h3 data-i18n="process.p3.title">3) Uvidi &amp; preporuke</h3>
+          <p data-i18n="process.p3.desc">Izvršni rezime, vizuali i prioritizovane akcije — fokus na naredni potez (strategija, GTM, messaging, investicija).</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- CASE / REZULTATI -->
+  <section id="case" class="section">
+    <div class="container">
+      <h2 data-i18n="case.title">Primeri rezultata</h2>
+      <p class="lead" data-i18n="case.lead">Kratki, proverljivi ishodi — od hipoteze do odluke.</p>
+
+      <div class="grid cards">
+        <article class="card">
+          <h3 data-i18n="case.c1.title">B2B SaaS (Series A)</h3>
+          <ul>
+            <li data-i18n="case.c1.p1"><strong>Problem:</strong> nejasan ICP i messaging, visoki CAC.</li>
+            <li data-i18n="case.c1.p2"><strong>Pristup:</strong> 12 dubinskih intervjua + kvant brzi panel (n=186), AI tematizacija i mapiranje barijera → A/B test poruka.</li>
+            <li class="kpi" data-i18n="case.c1.kpi"><strong>Ishod:</strong> -18% CAC u 6 nedelja; +25% CTR u paid setu.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3 data-i18n="case.c2.title">Industrial / IoT</h3>
+          <ul>
+            <li data-i18n="case.c2.p1"><strong>Problem:</strong> nejasna veličina tržišta za novu liniju.</li>
+            <li data-i18n="case.c2.p2"><strong>Pristup:</strong> sekundarni izvori + ekspertni panel, AI agent za monitor konkurencije, scenariji rasta.</li>
+            <li class="kpi" data-i18n="case.c2.kpi"><strong>Ishod:</strong> odluka o ulasku u 2 od 4 segmenta, pilot sa 3 ključna kupca.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- O NAMA -->
+  <section id="o-nama" class="section">
+    <div class="container about">
+      <div>
+        <h2 data-i18n="about.title">O Neostatu</h2>
+        <p data-i18n="about.body">
+          Mi smo agencija za istraživanje tržišta koja spaja <strong>stručnost analitičara i konsultanta</strong>
+          sa <strong>in‑house AI agentima</strong> — da biste brže došli do validiranih uvida i odluka sa većom sigurnošću.
+        </p>
+        <ul class="bullets">
+          <li data-i18n="about.b1">Ekspertski tim + AI alati</li>
+          <li data-i18n="about.b2">Transparentna metodologija</li>
+          <li data-i18n="about.b3">Brz time‑to‑insight</li>
+        </ul>
+      </div>
+
+      <div class="about-card card">
+        <h3 data-i18n="about.deliver">Šta dobijate</h3>
+        <ul>
+          <li data-i18n="about.d1">Sažet „executive summary“ sa preporukama</li>
+          <li data-i18n="about.d2">Grafikoni, tabele i dataset (po potrebi)</li>
+          <li data-i18n="about.d3">Radionicu sa stakeholder‑ima (opciono)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIM -->
+  <section id="tim" class="section">
+    <div class="container">
+      <h2 data-i18n="team.title">Tim</h2>
+      <div class="grid cards">
+        <article class="card person">
+          <div class="avatar" aria-hidden="true">SV</div>
+          <h3 data-i18n="team.p1.n">Strahinja Vasiljević</h3>
+          <p class="small" data-i18n="team.p1.r">Lead Research &amp; Strategy</p>
+          <p data-i18n="team.p1.d">15+ projekata u B2B, SaaS i industriji. Fokus: ICP, poruke, GTM i odluke poduprte podacima.</p>
+        </article>
+        <article class="card person">
+          <div class="avatar" aria-hidden="true">AE</div>
+          <h3 data-i18n="team.p2.n">AI Engineering</h3>
+          <p class="small" data-i18n="team.p2.r">In‑house AI agenti &amp; data ops</p>
+          <p data-i18n="team.p2.d">Pipeline za prikupljanje/čišćenje, tematizaciju i monitoring — reproduktivan i proverljiv tok.</p>
+        </article>
+        <article class="card person">
+          <div class="avatar" aria-hidden="true">MC</div>
+          <h3 data-i18n="team.p3.n">Market Consulting</h3>
+          <p class="small" data-i18n="team.p3.r">Konsalting &amp; implementacija</p>
+          <p data-i18n="team.p3.d">Pretvaranje uvida u akcioni plan: pozicioniranje, ponuda, cenovna politika i kanali.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAKT -->
+  <section id="kontakt" class="section alt">
+    <div class="container">
+      <h2 data-i18n="contact.title">Kontakt</h2>
+      <p class="lead" data-i18n="contact.lead">Napišite cilj i rok — odgovaramo u 24h sa predlogom koraka.</p>
+
+      <form name="kontakt" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
+        <input type="hidden" name="form-name" value="kontakt" />
+        <p class="hidden">
+          <label data-i18n="contact.honeypot">Ne popunjavajte ovo: <input name="bot-field" /></label>
+        </p>
+
+        <div class="form-row">
+          <label for="ime" data-i18n="contact.name">Ime i prezime</label>
+          <input id="ime" name="ime" type="text" required />
+        </div>
+        <div class="form-row">
+          <label for="email" data-i18n="contact.email">E‑mail</label>
+          <input id="email" name="email" type="email" required />
+        </div>
+        <div class="form-row">
+          <label for="poruka" data-i18n="contact.msg">Poruka</label>
+          <textarea id="poruka" name="poruka" rows="5" placeholder="Cilj, industrija, rok…"></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary" data-i18n="contact.submit">Pošalji</button>
+          <a class="btn btn-link" href="mailto:hello@neostat.ai" data-i18n="contact.alt">Ili pošalji e‑mail</a>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
     <div class="container footer-inner">
       <div class="brand-line">
-        <img src="/images/logo.svg" alt="Neostat logo" width="20" height="20" />
+        <img src="images/logo.svg" alt="Neostat logo" width="20" height="20" />
         <strong>Neostat</strong>
       </div>
-      <nav class="footer-nav">
-        <a href="#usluge">Usluge</a>
-        <a href="#proces">Proces</a>
-        <a href="#o-nama">O nama</a>
-        <a href="#kontakt">Kontakt</a>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#usluge" data-i18n="nav.services">Usluge</a>
+        <a href="#proces" data-i18n="nav.process">Proces</a>
+        <a href="#o-nama" data-i18n="nav.about">O nama</a>
+        <a href="#kontakt" data-i18n="nav.contact">Kontakt</a>
       </nav>
-      <p class="small">© <span id="year"></span> Neostat — Sva prava zadržana.</p>
+      <p class="small">© <span id="year"></span> Neostat — <span data-i18n="footer.rights">Sva prava zadržana.</span></p>
     </div>
   </footer>
 
+  <!-- Schema.org (ostaje generički dok ne razdvojimo jezike po URL-u) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Neostat",
-    "url": "https://www.neostat.example/",
-    "description": "Istraživanje tržišta uz AI eksperte i in‑house AI alate.",
-    "logo": "https://www.neostat.example/images/logo.svg",
-    "sameAs": []
+    "url": "https://strahinjavasiljevic.github.io/neostat-site/",
+    "description": "AI‑potpomognuto istraživanje tržišta, SWOT i strateški konsalting.",
+    "logo": "https://strahinjavasiljevic.github.io/neostat-site/images/logo.svg",
+    "sameAs": ["https://www.linkedin.com/company/neostat","mailto:hello@neostat.ai"]
   }
   </script>
-  <script src="/assets/script.js"></script>
+
+  <!-- JS -->
+  <script src="assets/script.js"></script>
+  <script defer src="https://assets.calendly.com/assets/external/widget.js"></script>
 </body>
 </html>
